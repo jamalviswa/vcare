@@ -1,0 +1,11 @@
+#rateMe{clear:both;display: inline-block;margin-left:40px;height: 65px;width: 300px;margin-top: 10px;}
+#rateMe li{float:left;list-style:none;}
+#rateMe li a:hover,
+#rateMe .on{background:url(star-on.png) no-repeat;}
+#rateMe a{float:left;background:url(star-off.png) no-repeat;width:25px; height:25px;}
+#rateStatus{width:30%; height:50px; color:#903; margin-top:20px;float: right; display:none;}
+#ratingSaved{display:none;}
+.saved{color:red; }
+.rate-button{background:url(rate/00star.gif) transparent no-repeat;width: 85px;border: none;}
+.container{}
+#txtHint{ text-align:center;}

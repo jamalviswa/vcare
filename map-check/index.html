@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Geolocation</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    
+    <script src="./index.js"></script>
+    <style type="text/css">
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+#map {
+  height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.custom-map-control-button {
+  background-color: #fff;
+  border: 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+  padding: 0 0.5em;
+  font: 400 18px Roboto, Arial, sans-serif;
+  overflow: hidden;
+  height: 40px;
+  cursor: pointer;
+}
+.custom-map-control-button:hover {
+  background: #ebebeb;
+}
+    </style>
+  </head>
+  <body>
+      <!--&destination=coimbatore-->
+    <div id="map"></div>
+    <iframe allowfullscreen="" class="maps" frameborder="0" id="mapnavi" name="mapnavi" src="https://www.google.com/maps/embed?
+&key=AIzaSyC-5CY9mOCeg5Y3IhPqi_Yd0-DZtWrJl-E">
+</iframe>
+<!--<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31331.259411176557!2d76.94577393928085!3d11.008027007249986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba858fe41b3d41d%3A0xc4e3b85dfd9851ba!2sLions%20Club%20of%20Coimbatore%20Ramnagar!5e0!3m2!1sen!2sus!4v1627646999910!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->-->
+    <!--<iframe src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBg32t8VhZ2AcEy8IpIzBK9PtcOCVQF1v0"" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>-->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBg32t8VhZ2AcEy8IpIzBK9PtcOCVQF1v0"
+      async
+    ></script>
+    <script>
+        var options = {
+  enableHighAccuracy: true,
+  timeout: 5000,
+  maximumAge: 0
+};
+
+function success(pos) {
+  var crd = pos.coords;
+
+  console.log('Your current position is:');
+  console.log(`Latitude : ${crd.latitude}`);
+  console.log(`Longitude: ${crd.longitude}`);
+  console.log(`More or less ${crd.accuracy} meters.`);
+}
+
+function error(err) {
+  console.warn(`ERROR(${err.code}): ${err.message}`);
+}
+
+navigator.geolocation.getCurrentPosition(success, error, options);
+
+    </script>
+  </body>
+</html>

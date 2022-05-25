@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <script src="https://maps.google.com/maps/api/js?key=AIzaSyAteo77fhOppaMLuJxZ1dggEd5qHuiyhSU"></script>
+        <style>
+            *,
+*:after,
+*:before {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+}
+body {
+	font:400 13px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	background:#333;
+}
+html,
+body,
+#google_canvas {
+	height:100%;
+}
+#google_canvas h1 {
+	font-size:16px;
+}
+#google_canvas h2 {
+	font-size:14px;
+	font-weight:300;
+}
+#map-page, #map-canvas { width: 100%; height: 100%; padding: 0; }
+        </style>
+    </head>
+    <body>
+        
+        <div id="google_canvas"></div>
+        
+        <script>
+            (function() {
+  if(!!navigator.geolocation) {
+    var map;
+    var mapOptions = {
+      zoom: 15,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    map = new google.maps.Map(document.getElementById('google_canvas'), mapOptions);
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var geolocate = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+      var infowindow = new google.maps.InfoWindow({
+        map: map,
+        position: geolocate,
+        content:
+        '<h1>Local atual</h1>' +
+        '<h2>Latitude: ' + position.coords.latitude + '</h2>' +
+        '<h2>Longitude: ' + position.coords.longitude + '</h2>'
+      });
+      map.setCenter(geolocate);
+    });
+  } else {
+    document.getElementById('google_canvas').innerHTML = 'Não oferece suporte a geolocalização';
+  }
+})();
+        </script>
+    </body>
+    
+</html>

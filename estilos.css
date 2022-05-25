@@ -1,0 +1,90 @@
+
+
+/*MENU*/
+
+.menu {
+  list-style: none;
+  line-height: 42px;
+  margin: auto;
+  /*outline: 1px solid red;*/
+  padding-left: 0;
+  width: 15em;
+}
+
+.menu a {
+  background: url(icons.png) no-repeat left top;
+  color: #674c4c;
+  text-decoration: none;
+  display: block;
+  padding-left: 3em;
+  font-size:14px;
+  width: 100%;
+}
+
+.menu a:hover {
+  margin-left: 1em;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+.menu li {
+  box-shadow: 3px 0 rgba(52,152,219,.2) inset;
+  margin-bottom: 5px;
+  padding-left: .5em;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;/*outline: 1px solid green*/
+}
+
+/*FIN MENU*/
+/*Posicion Responsive Menu*/
+
+nav {
+  background:#fff;
+-webkit-box-shadow: 2px 0px 3px 0px rgba(0,0,0,0.47);
+-moz-box-shadow: 2px 0px 3px 0px rgba(0,0,0,0.47);
+box-shadow: 2px 0px 3px 0px rgba(0,0,0,0.47);
+  position: absolute;
+  left: -18em;
+  top: 0;
+  box-sizing: border-box;
+  z-index: 9999;
+  height: 100%;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+nav.active { left: 0; }
+
+#mobile-nav {
+  background: url(icon/menu-icon.png);
+  cursor: pointer;
+  left: 20px;
+  height: 30px;
+  position: fixed;
+  top: 30px;
+  width: 30px;
+  z-index: 99999;
+}
+
+article {
+  padding: .5em 0;
+  line-height: 1.5;
+}
+
+footer {
+  font-size: 0.8em;
+  margin-top: 2em;
+  border-top: 1px solid rgba(52,152,219,.1);
+  text-align: right;
+  padding-top: 2em;
+}
+
+footer a {
+  color: rgba(52,152,219,.7);
+  text-decoration: none;
+}
+
+footer a:hover { text-decoration: underline; }

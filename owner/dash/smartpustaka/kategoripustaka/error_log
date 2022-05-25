@@ -1,0 +1,6 @@
+[13-May-2019 23:52:54 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'jasamitra_android '@'localhost' (using password: YES)' in /home/jasamitra/public_html/owner/dash/smartpustaka/kategoripustaka/db.php:5
+Stack trace:
+#0 /home/jasamitra/public_html/owner/dash/smartpustaka/kategoripustaka/db.php(5): PDO->__construct('mysql:host=loca...', 'jasamitra_andro...', 'OracleCloud1234')
+#1 /home/jasamitra/public_html/owner/dash/smartpustaka/kategoripustaka/fetch.php(2): include('/home/jasamitra...')
+#2 {main}
+  thrown in /home/jasamitra/public_html/owner/dash/smartpustaka/kategoripustaka/db.php on line 5

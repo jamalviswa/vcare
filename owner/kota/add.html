@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>Add Data</title>
+</head>
+<body style="font-family:Segoe UI;margin-left:70px;margin-right:70px">
+<center><b style="padding:10px">Add Data Cordinate</b></center><br>
+<form id="form"action="add.php" enctype="multipart/form-data"  method="post" name="postform">
+
+<table style="width:100%;padding:10px">
+  <tr style="padding:10px">
+    <th colspan="4" style="padding:10px"></th>
+  </tr>
+
+   <tr>
+    <td style="padding:10px;background:#dadada">Latitude</td>
+    <td><input style="padding:10px;width:100%"type="text" placeholder="paste Latitude City"name="latsensor"required="required"></td>
+    <td style="padding:10px;background:#dadada">Longitude</td>
+    <td><input style="padding:10px;width:100%"type="text" placeholder="paste Longitude City"name="lngsensor"required="required"></td>
+     </tr>
+ 
+      <tr>
+	<td style="padding:10px;background:#dadada">City Name / point</td>
+    <td><input style="padding:10px;width:100%"type="text" placeholder="City name or point"name="nama_sensor"required="required"></td>
+    
+	  <td>
+<center><a href="index.php"><div style="background:red;width:200px;border:none;padding:10px;width:90%;color:#fff" class="testbutton">Cancel</div></a>
+</center>
+				</td>
+				<td><center><button style="background:green;width:200px;border:none;padding:10px;width:90%;color:#fff" class="testbutton" type="submit" name="submit" value="save Data">Save Data</button></center></td>
+			</tr>
+		</table>
+  
+		<br>
+	</form>
+</body>
+</html>
+
